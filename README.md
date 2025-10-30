@@ -7,6 +7,10 @@ A Python implementation of the Black-Scholes model for pricing European call and
 - **Option Pricing**: Calculate theoretical prices for both call and put options
 - **Greeks Calculation**: Compute all five primary Greeks (Delta, Gamma, Vega, Theta, Rho)
 - **Interactive Interface**: User-friendly command-line interface for inputting parameters
+- **Visualizations**: Generate charts showing how option prices change with different parameters
+  - Option price vs stock price
+  - Option price vs volatility
+  - Option price vs time to expiration
 - **Accurate Implementation**: Based on the classic Black-Scholes-Merton formula
 
 ## What are Options?
@@ -46,7 +50,7 @@ cd option-pricing-model
 
 2. Install required dependencies:
 ```bash
-pip install scipy
+pip3 install scipy matplotlib numpy --break-system-packages
 ```
 
 ## Usage
@@ -62,6 +66,20 @@ Enter the required parameters when prompted:
 - Time to expiration (in years)
 - Risk-free rate (as decimal, e.g., 0.05 for 5%)
 - Volatility (as decimal, e.g., 0.20 for 20%)
+
+## Visualizations
+
+To generate visualizations showing how option prices change with different parameters:
+```bash
+python visualizations.py
+```
+
+This will generate three charts:
+1. **Option Price vs Stock Price** - Shows call and put values across different stock prices
+2. **Option Price vs Volatility** - Demonstrates how volatility affects option pricing
+3. **Option Price vs Time** - Illustrates time decay (theta) effect
+
+Close each chart window to see the next visualization.
 
 ### Example
 ```
@@ -99,10 +117,11 @@ Rho: -0.4189
 
 - Python 3.x
 - scipy
+- matplotlib
+- numpy
 
 ## Future Enhancements
 
-- Add visualization of option prices across different parameters
 - Implement Monte Carlo simulation for exotic options
 - Add real-time stock data integration via API
 - Create web-based interface
