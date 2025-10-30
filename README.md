@@ -4,6 +4,7 @@ A Python implementation of the Black-Scholes model for pricing European call and
 
 ## Features
 
+- **Real-Time Stock Data**: Pull live stock prices and calculate historical volatility from Yahoo Finance
 - **Option Pricing**: Calculate theoretical prices for both call and put options
 - **Greeks Calculation**: Compute all five primary Greeks (Delta, Gamma, Vega, Theta, Rho)
 - **Interactive Interface**: User-friendly command-line interface for inputting parameters
@@ -50,22 +51,31 @@ cd option-pricing-model
 
 2. Install required dependencies:
 ```bash
-pip3 install scipy matplotlib numpy --break-system-packages
+pip3 install scipy matplotlib numpy yfinance --break-system-packages
 ```
 
 ## Usage
 
-Run the program:
+### Option 1: Use Real Stock Data
+
+Run the enhanced program with real-time stock data:
+```bash
+python main_with_stock_data.py
+```
+
+Choose option 1 and enter a stock ticker (e.g., AAPL, TSLA, GOOGL). The program will:
+- Fetch current stock price
+- Calculate historical volatility
+- Let you customize strike price, expiration, and risk-free rate
+
+### Option 2: Manual Input
+
+Run the program with manual inputs:
 ```bash
 python main.py
 ```
 
-Enter the required parameters when prompted:
-- Current stock price
-- Strike price
-- Time to expiration (in years)
-- Risk-free rate (as decimal, e.g., 0.05 for 5%)
-- Volatility (as decimal, e.g., 0.20 for 20%)
+Or choose option 2 in `main_with_stock_data.py` to enter all parameters manually.
 
 ## Visualizations
 
@@ -119,6 +129,7 @@ Rho: -0.4189
 - scipy
 - matplotlib
 - numpy
+- yfinance
 
 ## Future Enhancements
 
