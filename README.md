@@ -91,6 +91,17 @@ This will generate three charts:
 
 Close each chart window to see the next visualization.
 
+## Screenshots
+
+### Terminal Output with Real Stock Data
+![Terminal Output](screenshots/terminal_output.png)
+
+### Option Prices vs Stock Price
+![Price vs Stock Price](screenshots/visualization.png)
+
+### Option Prices vs Time to Expiration
+![Price vs Time](screenshots/volatility_chart.png)
+
 ### Example
 ```
 Enter current stock price: $100
